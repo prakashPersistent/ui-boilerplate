@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,12 +22,140 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>React App</title>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+
+    :root {
+      /* Font Family : Font Family
+         *             : Title & body text font family variable
+         * ------------------------------------------------------------------------- */
+      --section-padding-top: 50px;
+      --section-padding-bottom: 50px;
+
+      --section-padding-top-mobile: 60px;
+      --section-padding-bottom-mobile: 60px;
+
+      --section-default-color: ;
+      --section-light-color: #f4f0ec;
+      --section-dark-color: #000000;
+
+      --image-overlay-background: #000000;
+      --image-overlay-opacity: 0.3;
+
+      --image-border-radius: 4px;
+
+
+      /* Font Family : Font Family
+         *             : Title & body text font family variable
+         * ------------------------------------------------------------------------- */
+      --main-header-font: 'Roboto', sans-serif;
+      --main-header-font-weight: , ;
+      --main-body-font: 'Roboto', sans-serif;
+
+      --button-font-family: 'Roboto', sans-serif;
+      --page-width-layout: 1600px;
+
+      --font-body-family: 'Roboto', sans-serif;
+      --font-body-style: normal;
+      --font-body-weight: 400;
+
+      --font-heading-family: 'Roboto', sans-serif;
+      --font-heading-style: normal;
+      --font-heading-weight: 400;
+
+      --font-body-scale: 1.0;
+      --font-heading-scale: 1.0;
+
+      /* Cols Gap : Gap
+         *          : column Gap variable
+         * ------------------------------------------------------------------------- */
+      --cols-gap: 2rem;
+
+      /* Button : Button color 
+         *        : All button color variable
+         * ------------------------------------------------------------------------- */
+      --button-radius: 4px;
+
+      --primary-button-color: #000000;
+      --primary-button-hover-color: #2c2c2c;
+      --primary-button-text-color: #ffffff;
+      --primary-button-text-hover-color: #ffffff;
+      --primary-button-outline: #000000;
+      --primary-button-outline_hover: #000000;
+
+      --secondary-button-color: #ffffff;
+      --secondary-button-hover-color: #f1f1f1;
+      --secondary-button-text-color: #000000;
+      --secondary-button-text-hover-color: #000000;
+      --secondary-button-outline: #000000;
+      --secondary-button-outline_hover: #000000;
+
+      --disabled-button-color: #dddddd;
+      --disabled-button-text-color: #dddddd;
+
+      --primary-input-border: #dddddd;
+      --primary-input-text: #000000;
+      --secondary-input-border: #ffffff;
+      --secondary-input-text: #ffffff;
+
+
+      /* Text : Primary & Secondary 
+          *      : All Text color variable
+         * ------------------------------------------------------------------------- */
+      --body-background-color: #faf7f5;
+
+      --primary-heading-color: #262220;
+      --secondary-heading-color: #fdfdfd;
+      --primary-text-color: #262220;
+      --secondary-text-color: #ffffff;
+
+
+      /* Header : Header color  
+         *        : Header background & text color variable
+         * ------------------------------------------------------------------------- */
+      --header-color: #ffffff;
+      --header-gradient-color: linear-gradient(127deg, rgba(254, 217, 81, 1) 11%, rgba(255, 70, 199, 1) 81%);
+      --header-text-color: #000000;
+
+
+      /* Annoucement : Annoucement color  
+         *             : Annoucement background & text color variable
+         * ------------------------------------------------------------------------- */
+      --annoucement-color: #000000;
+      --annoucement-gradient-color: linear-gradient(54deg, rgba(114, 255, 179, 1) 14%, rgba(255, 250, 99, 1) 85%);
+      --annoucement-text-color: #dddddd;
+
+      /* Gift Card : Gift card logo height  
+         *             : Gift card logo height 
+         * ------------------------------------------------------------------------- */
+      --gitft-card-logo-desktop-height: 25px;
+      --gitft-card-logo-mobile-height: 18px;
+
+      /* Footer : Footer color  
+         *        : Footer background & text color variable
+         * ------------------------------------------------------------------------- */
+      --footer-color: #000000;
+      --footer-gradient-color: linear-gradient(54deg, rgba(175, 172, 127, 1) 14%, rgba(228, 185, 6, 1) 85%);
+      --footer-text-color: #fbf9f3;
+      --footer-logo-width: px;
+
+      --copyright-color: #ffffff;
+      --copyright-gradient-color: ;
+      --copyright-text-color: #000000;
+
+      --text-with-icon-color: #f4f0ec;
+      --text-with-icon-gradient-color: ;
+      --text-with-icon-text-color: #000000;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -39,5 +165,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>

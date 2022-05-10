@@ -1,0 +1,117 @@
+/* Button components  scss 
+ *------------------------------------------------*/
+/*  Button scss 
+ *------------------------------------------------*/
+ @keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+a.button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1.4rem 2.8rem;
+  line-height: 1.8rem;
+  font-size: 1.4rem;
+  text-align: center;
+  border-radius: $button_radius;
+  font-family: $button_font;
+  @include mq("phone-and-tablet") {
+    padding: 1.2rem 2.4rem;
+  }
+}
+.button {
+  border-radius: $button_radius;
+  font-family: $button_font;
+  cursor: pointer;
+  padding: 1.4rem 2.8rem;
+  line-height: 1.8rem;
+  font-size: 1.4rem;
+  @include mq("phone-and-tablet") {
+    padding: 1.2rem 2.4rem;
+  }
+  &.loading {
+    color: transparent;
+    position: relative;
+    &:hover {
+      color: transparent;
+    }
+    &:after {
+      animation: loading 0.5s infinite linear;
+      border: 0.5rem solid $loading_button_border;
+      border-left: 0.5rem solid $loading_button_left_border;
+      border-radius: 100%;
+      box-sizing: content-box;
+      content: "";
+      display: block;
+      height: 2rem;
+      position: absolute;
+      width: 2rem;
+      @include transform(translate(-50%, -50%));
+      left: 50%;
+      top: 1rem;
+    }
+  }
+}
+.button-full {
+  width: 100%;
+}
+.primary-button {
+  transition: all 0.3s;
+}
+.secondary-button:hover {
+  transition: all 0.3s;
+}
+.disabled-button:hover {
+  cursor: not-allowed;
+}
+a.button-icon {
+  font-family: $button_font;
+  color: $color_black;
+}
+
+.primary-button {
+  background: $primary_button_color;
+  color: $primary_button_text_color;
+  border: 0.1rem solid $primary_button_outline;
+}
+.primary-button:hover {
+  background: $primary_button_hover_color;
+  color: $primary_button_text_hover_color;
+  border: 0.1rem solid $primary_button_outline_hover;
+}
+.secondary-button {
+  background: $secondary_button_color;
+  color: $secondary_button_text_color;
+  border: 0.1rem solid $secondary_button_outline;
+}
+.secondary-button:hover {
+  background: $secondary_button_hover_color;
+  color: $secondary_button_text_hover_color;
+  border: 0.1rem solid $secondary_button_outline_hover;
+}
+.disabled-button {
+  background: $disabled_button_color;
+  border: 0.1rem solid $disabled_button_color;
+  color: $disabled_button_text_color;
+}
+
+button.shopify-payment-button__button {
+  background: $primary_button_color;
+  color: $primary_button_text_color;
+  border: 0.1rem solid $primary_button_outline;
+  padding: 1.4rem 2.8rem;
+  cursor: pointer;
+  border-radius: $button_radius;
+  font-family: $button_font;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+button.shopify-payment-button__button:hover:not([disabled]) {
+  background-color: $primary_button_hover_color;
+  color: $primary_button_text_hover_color;
+  border: 0.1rem solid $primary_button_outline_hover;
+}
