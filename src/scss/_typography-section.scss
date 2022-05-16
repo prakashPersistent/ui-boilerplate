@@ -1,0 +1,18 @@
+@import "variable";
+
+.typography-section {
+  padding: 2rem 0;
+  .mt-2 {
+    margin-top: 2rem;
+  }
+  .typography-box {
+    margin-bottom: 5rem;
+    .typography-title {
+      font-size: 3rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 0.1rem solid $color_grey;
+    }
+  }
+}

@@ -69,9 +69,9 @@
  /* Font Family : Font Family
   *             : Title & body text font family variable
   * ------------------------------------------------------------------------- */
- $head_font: var(--main-header-font);
+ $head_font:Ivy Mode;
  $header_font_weight: var(--main-header-font-weight);
- $base_font: var(--main-body-font);
+ $base_font: 'Aktiv Grotesk Ex Basic', sans-serif;
  
  $button_font: var(--button-font-family);
  
@@ -185,4 +185,10 @@
  /* font body scale
   * ------------------------------------------------------------------------- */
   $font-scale: var(--font-body-scale);
+
+
+ /* code tag basic
+  * ------------------------------------------------------------------------- */
+  $code-color: #c7254e;
+  $code-bg-color: #f1dde3;
  

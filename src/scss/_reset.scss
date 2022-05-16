@@ -106,86 +106,191 @@ body {
   background: $body_background_color;
 }
 
-.h1,
 h1 {
-  font-size: 5.4rem;
-  @include mq("phone") {
-    font-size: 4.5rem;
+  &.heading {
+    font-family: $head_font;
+    font-size: 4.8rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    &.heading-light {
+      font-weight: 300;
+    }
   }
 }
-
-.h2,
 h2 {
-  font-size: 4.5rem;
-  @include mq("phone") {
+  &.heading {
+    font-family: $head_font;
     font-size: 3.6rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    &.heading-light {
+      font-weight: 300;
+    }
   }
 }
-
-.h3,
 h3 {
-  font-size: 3.6rem;
-  @include mq("phone") {
-    font-size: 2.8rem;
+  &.heading {
+    font-family: $head_font;
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    @include mq("phone") {
+      font-size: 2.2rem;
+    }
+    &.heading-light {
+      font-weight: 300;
+    }
   }
 }
 
-.h4,
-h4 {
-  font-size: 3rem;
-  @include mq("phone") {
-    font-size: 2.2rem;
-  }
-}
-
-.h5,
-h5 {
+h3 {
+  font-family: $base_font;
   font-size: 2.4rem;
-  @include mq("phone") {
-    font-size: 1.8rem;
+  letter-spacing: 0.06rem;
+  &.italic {
+    font-weight: normal;
+    font-style: italic;
+  }
+  &.light {
+    font-weight: 300;
+    font-style: normal;
   }
 }
 
-.h6,
-h6 {
+h4 {
+  font-family: $base_font;
   font-size: 2rem;
+  letter-spacing: 0.06rem;
+  &.italic {
+    font-weight: normal;
+    font-style: italic;
+  }
+  &.light {
+    font-weight: 300;
+    font-style: normal;
+  }
+}
+
+h5 {
+  font-family: $base_font;
+  font-size: 1.8rem;
+  letter-spacing: 0.05rem;
+  &.italic {
+    font-weight: normal;
+    font-style: italic;
+  }
+  &.light {
+    font-weight: 300;
+    font-style: normal;
+  }
+}
+h6 {
+  font-family: $base_font;
+  font-size: 1.6rem;
+  letter-spacing: 0.05rem;
   @include mq("phone") {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+  &.italic {
+    font-weight: normal;
+    font-style: italic;
+    &.bold {
+      font-weight: 500;
+      font-style: italic;
+    }
+  }
+  &.light {
+    font-weight: 300;
+    font-style: normal;
   }
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $head_font;
-  font-weight: $header_font_weight;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  &.heading-primary {
-    color: $primary_heading_color;
+.text-xx-lg {
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+  font-weight: normal;
+  &.light {
+    font-weight: 300;
+    font-style: normal;
+  }
+  &.italic {
+    font-style: italic;
   }
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  &.heading-secondary {
-    color: $secondary_heading_color;
+.text-x-lg {
+  font-size: 1.8rem;
+  letter-spacing: 0.05rem;
+  font-weight: normal;
+  &.light {
+    font-weight: 300;
+    font-style: normal;
+  }
+  &.italic {
+    font-style: italic;
   }
 }
-
+.text-lg {
+  font-size: 1.6rem;
+  letter-spacing: 0.05rem;
+  font-weight: normal;
+  &.light {
+    font-weight: 300;
+    font-style: normal;
+  }
+  &.italic {
+    font-style: italic;
+  }
+}
+.text-md {
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  font-weight: normal;
+  &.light {
+    font-weight: 300;
+    font-style: normal;
+  }
+  &.italic {
+    font-style: italic;
+  }
+}
+.text-sm {
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+  font-weight: normal;
+  &.light {
+    font-weight: 300;
+    font-style: normal;
+  }
+  &.italic {
+    font-style: italic;
+  }
+}
+.text-x-sm {
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  font-weight: normal;
+  &.light {
+    font-weight: 300;
+    font-style: normal;
+  }
+  &.italic {
+    font-style: italic;
+  }
+}
+.text-xx-sm {
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  font-weight: normal;
+  &.light {
+    font-weight: 300;
+    font-style: normal;
+  }
+  &.italic {
+    font-style: italic;
+  }
+}
 p {
   font-size: 1.4rem;
   font-weight: 400;
@@ -195,4 +300,13 @@ p {
 a {
   text-decoration: none;
   font-size: 1.4rem;
+}
+code {
+  padding: 0.4rem 0.8rem;
+  margin: 0.5rem 0 0 0;
+  font-size: 1.4rem;
+  color: $code-color;
+  display: inline-block;
+  background-color: $code-bg-color;
+  border-radius: 0.5rem;
 }
