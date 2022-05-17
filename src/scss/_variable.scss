@@ -1,48 +1,35 @@
 /* Variable : Color
  *          : Color code variable 
  * ------------------------------------------------------------------------- */
+ /*Monochrome Color for body*/
  $color_black: #000000;
- $color_black_variant: #262220;
  $color_white: #ffffff;
- $color_white_smoke: #F3F3F3;
  $color_grey: #dddddd;
- $color-dark-grey: #636363;
- $color_light_gray: #898989;
- $color_ultra_light_gray: #454545;
- $color_gainsboro_gray: #e2e2e2;
- $color_gray61: #9c9c9c;
- $color_black_mana: #868686;
- $color_base_gray: #7d7b7a;
- $color_dove_gray: #6F6F6F;
- $color_trolley_gray: #828282;
- $color_suva_gray: #868686;
+ $color_deep_grey: #2F2F30;
+ $color_light_grey: #F7F7F7;
+
  $color_bokara_gray: #262220;
- $color_black_mana: #868686;
- $color_american_silver: #CFCFCF;
- $color_gray77: #C4C4C4;
- $color_red: #FF8484;
- $color_price: #A49A95;
- $color_light_black: #262220;
  $color-base-text: #121212;
- $header_border_color: rgba($color-base-text, 0.08);
- $border-color: #D0D0D0;
- $color-success-background: #d4edda;
- $color-success-text: #155724;
- $color-error-background:#f8d7da;
- $color-error-text: #721c24;
- $color-quick-view-bg: #ffffffb3;
- $color-green: #79a70a;
- $color-border-red: #8f0808;
- $color-light-red: #f70505;
- $color-compare-red: #f70505;
- $color-small-text: #272320;
- $border-color: #D0D0D0;
- $color-low-inventory: #ac1f1f;
- $cart-msg-bg:#2e9e7b;
- $color-light-pink: #f5f1ec;
- $price-range-color: #332F2D;
- $price-range-bg: #E6E6E6;
+
+ /*System Colours*/
+ $color_green:#74805D;
+ $color_red:#E35F5F;
+
+ /*Primary Color Palette*/
+ $color_mink: #D6C5B9;
+ $color_tofu: #E9E5DB;
+ $color_almond: #F6F1E8;
+ $color_silk: #F2EDEA;
+ $color_oat: #F9F7F6;
  
+ /*Secondary Color Palette*/
+ $color_kelp: #52543C;
+ $color_olive: #838471;
+ $color_barley: #E4D1B5;
+ $color_lilac: #E7E1E7;
+ $color_sage: #E8E5D3;
+
+
  /* Section Padding : Sections Padding
   *                 : Padding variable
   * ------------------------------------------------------------------------- */

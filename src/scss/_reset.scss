@@ -291,6 +291,142 @@ h6 {
     font-style: italic;
   }
 }
+
+/*background color Palette*/
+.bg-mink {
+  background-color: $color_mink;
+}
+.bg-tofu {
+  background-color: $color_tofu;
+}
+.bg-almond {
+  background-color: $color_almond;
+}
+.bg-silk {
+  background-color: $color_silk;
+}
+.bg-oat {
+  background-color: $color_oat;
+}
+.bg-kelp {
+  background-color: $color_kelp;
+}
+.bg-olive {
+  background-color: $color_olive;
+}
+.bg-barley {
+  background-color: $color_barley;
+}
+.bg-lilac {
+  background-color: $color_lilac;
+}
+.bg-sage {
+  background-color: $color_sage;
+}
+.bg-dark-gray {
+  background-color: $color_deep_grey;
+}
+.bg-light-gray {
+  background-color: $color_light_grey;
+}
+.bg-white {
+  background-color: $color_white;
+}
+.bg-black {
+  background-color: $color_black;
+}
+.bg-green {
+  background-color: $color_green;
+}
+.bg-red {
+  background-color: $color_red;
+}
+/*text color Palette*/
+.text-mink {
+  color: $color_mink;
+}
+.text-tofu {
+  color: $color_tofu;
+}
+.text-almond {
+  color: $color_almond;
+}
+.text-silk {
+  color: $color_silk;
+}
+.text-oat {
+  color: $color_oat;
+}
+.text-kelp {
+  color: $color_kelp;
+}
+.text-olive {
+  color: $color_olive;
+}
+.text-barley {
+  color: $color_barley;
+}
+.text-lilac {
+  color: $color_lilac;
+}
+.text-sage {
+  color: $color_sage;
+}
+.text-dark-gray {
+  color: $color_deep_grey;
+}
+.text-light-gray {
+  color: $color_light_grey;
+}
+.text-white {
+  color: $color_white;
+}
+.text-black {
+  color: $color_black;
+}
+.text-green {
+  color: $color_green;
+}
+.text-red {
+  color: $color_red;
+}
+.input-error {
+  border: 0.1rem solid $color_red;
+}
+.input-success {
+  border: 0.1rem solid $color_green;
+}
+.border {
+  border: 0.1rem solid $color_tofu;
+}
+.border-silk {
+  border: 0.1rem solid $color_silk;
+}
+.border-oat {
+  border: 0.1rem solid $color_oat;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+
+.shadow-1 {
+  box-shadow: 0 0 0.3rem $color_tofu inset;
+}
+.shadow-2 {
+  box-shadow: 0 0 0.3rem $color_tofu inset, 0 0.2rem 0.8rem rgba($color_tofu, 0.251449);
+}
+.shadow-3 {
+  box-shadow: 0 0.2rem 0.8rem rgba($color_black, 0.099707);
+}
+.shadow-4 {
+  box-shadow: 0 0.2rem 0.8rem rgba($color_black, 0.035358);
+}
 p {
   font-size: 1.4rem;
   font-weight: 400;

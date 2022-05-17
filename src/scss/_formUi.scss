@@ -1,7 +1,220 @@
 /* Input field components  scss 
  *------------------------------------------------*/
+.custom-radio {
+  input[type="radio"] {
+    height: 0;
+    width: 0;
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    &:checked + label {
+      &::after {
+        @include transform(scale(1));
+      }
+    }
+  }
+  label {
+    min-height: 2rem;
+    display: inline-block;
+    position: relative;
+    padding-left: 2.4rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 300;
+    user-select: none;
+    &::before {
+      content: "";
+      height: 2rem;
+      width: 2rem;
+      position: absolute;
+      border: 0.1rem solid $color_tofu;
+      box-shadow: 0 0 0.3rem $color_tofu inset, 0 0.2rem 0.8rem rgba($color_tofu, 0.25);
+      opacity: 1;
+      background-color: rgba($color_white, 0.6);
+      left: 0;
+      border-radius: 100%;
+    }
+    &::after {
+      content: "";
+      height: 1.4rem;
+      width: 1.4rem;
+      position: absolute;
+      border-radius: 100%;
+      top: 0.3rem;
+      left: 0.3rem;
+      background-color: $color_deep_grey;
+      box-shadow: 0 0.2rem 0.8rem rgba($color_black, 0.03);
+      @include transform(scale(0));
+      @include transition(transform 0.2s ease-in);
+    }
+  }
+}
 
- .field {
+.custom-checkbox {
+  input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    &:checked + label {
+      &::after {
+        @include transform(scale(1));
+      }
+    }
+  }
+  label {
+    min-height: 2.5rem;
+    display: inline-block;
+    position: relative;
+    padding-left: 3rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 300;
+    user-select: none;
+    &::before {
+      content: "";
+      height: 2.5rem;
+      width: 2.5rem;
+      position: absolute;
+      border: 0.1rem solid $color_tofu;
+      box-shadow: 0 0 0.3rem $color_tofu inset, 0 0.2rem 0.8rem rgba($color_tofu, 0.25);
+      opacity: 1;
+      background-color: rgba($color_white, 0.6);
+      left: 0;
+      border-radius: 0.2rem;
+    }
+    &::after {
+      content: "";
+      height: 1.7rem;
+      width: 1.7rem;
+      position: absolute;
+      border-radius: 0.2rem;
+      top: 0.4rem;
+      left: 0.4rem;
+      background-color: $color_deep_grey;
+      box-shadow: 0 0 0.3rem $color_tofu inset;
+      @include transform(scale(0));
+      @include transition(transform 0.2s ease-in);
+    }
+  }
+}
+
+.custom-toggle {
+  input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    &:checked + label {
+      &::after {
+        @include transform(translateX(1.7rem));
+      }
+    }
+  }
+  label {
+    min-height: 2rem;
+    display: inline-block;
+    position: relative;
+    padding-left: 4rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 300;
+    user-select: none;
+    &::before {
+      content: "";
+      height: 1.9rem;
+      width: 3.5rem;
+      position: absolute;
+      border: 0.1rem solid $color_tofu;
+      box-shadow: 0 0 0.3rem $color_tofu inset, 0 0.2rem 0.8rem rgba($color_tofu, 0.25);
+      opacity: 1;
+      background-color: rgba($color_white, 0.6);
+      left: 0;
+      border-radius: 1rem;
+    }
+    &::after {
+      content: "";
+      height: 1.7rem;
+      width: 1.7rem;
+      position: absolute;
+      border-radius: 100%;
+      top: 0.1rem;
+      left: 0.1rem;
+      background-color: $color_deep_grey;
+      box-shadow: 0 0 0.3rem $color_tofu inset;
+      @include transform(translateX(0rem));
+      @include transition(transform 0.15s ease-in);
+    }
+  }
+}
+
+.input-control {
+  border-radius: 0.2rem;
+  border: 0.1rem solid $color_tofu;
+  box-shadow: 0 0 0.3rem $color_tofu inset;
+  background-color: rgba($color_white, 0.45);
+  display: block;
+  width: 100%;
+  height: 4rem;
+  padding: 0.8rem 1.4rem;
+  font-size: 1.4rem;
+  line-height: 1.42;
+  color: $color_deep_grey;
+  outline: none;
+  @include transition(all 0.2s ease);
+  &:focus {
+    box-shadow: 0 0 0.3rem $color_tofu inset, 0 0.2rem 0.8rem rgba($color_tofu, 0.25);
+    background-color: rgba($color_white, 0.6);
+  }
+}
+textarea {
+  &.input-control {
+    height: auto;
+  }
+}
+.table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-sizing: border-box;
+  font-family: $base_font;
+  background-color: rgba($color_white, 0.45);
+  border: 0.1rem solid $color_tofu;
+  box-shadow: 0 0 0.3rem $color_tofu inset;
+  thead {
+    border: 0.08rem solid $color_tofu;
+    border-top: 0rem;
+    th {
+      border: 0;
+      background-color: $color_silk;
+      letter-spacing: 0.05rem;
+      font-size: 1.2rem;
+      font-weight: normal;
+      vertical-align: middle;
+      padding: 1.3rem 1.6rem;
+      line-height: 2rem;
+      color: $color_deep_grey;
+      text-align: center;
+    }
+  }
+  tbody {
+    td {
+      border: 0;
+      letter-spacing: 0.05rem;
+      font-size: 1rem;
+      font-weight: normal;
+      vertical-align: middle;
+      padding: 1.1rem 1.6rem;
+      line-height: 1.8rem;
+      color: $color_deep_grey;
+      text-align: center;
+    }
+  }
+}
+.field {
   position: relative;
   display: block;
   margin: 2rem 0 0 0;

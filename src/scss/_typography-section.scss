@@ -1,4 +1,5 @@
 @import "variable";
+@import "mixin";
 
 .typography-section {
   padding: 2rem 0;
@@ -7,12 +8,53 @@
   }
   .typography-box {
     margin-bottom: 5rem;
+    .typography-head {
+      font-size: 4.2rem;
+      text-align: center;
+      font-weight: 300;
+      margin: 10rem 0 5rem;
+      font-family: $head_font;
+    }
+    .typography-sub-title {
+      font-size: 2rem;
+      font-weight: normal;
+      margin-bottom: 2rem;
+    }
     .typography-title {
       font-size: 3rem;
       font-weight: 300;
       margin-bottom: 2rem;
       padding-bottom: 1rem;
       border-bottom: 0.1rem solid $color_grey;
+    }
+    .item-circle {
+      height: 9.8rem;
+      width: 9.8rem;
+      border-radius: 100%;
+      margin-bottom: 1rem;
+    }
+    .item-square {
+      height: 10.7rem;
+      width: 11.8rem;
+      margin-bottom: 1rem;
+    }
+    .typography-space{
+      padding: 2rem;
+    }
+    .typography-control{
+      margin-bottom: 1.5rem;
+      @include flexbox();
+      @include align-items(center);
+      .typography-label{
+        display: block;
+        min-width: 7.5rem;
+        font-size: 1.4rem;
+        padding: 0 1rem 0 0;
+        font-weight: 300;
+      }
+      .typography-area{
+        padding: 0 0 0 1rem;
+      }
     }
   }
 }
