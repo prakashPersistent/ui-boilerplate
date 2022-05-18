@@ -3,6 +3,9 @@ import './scss/app.scss';
 import SVGIcon from './svg/arrow-right.svg';
 import ArrowDown from './svg/arrow-down.svg';
 import PlusIcon from './svg/plus.svg';
+import Dropdown from './Components/Dropdown';
+import {data,disabled,accordionData} from "./Constants/constants" 
+import Accordion from './Components/Accordion';
 
 function App() {
   return (
@@ -536,51 +539,12 @@ function App() {
           <div className='typography-box'>
             <h3 className='typography-head'>Components</h3>
             <h3 className='typography-title'>Dropdown</h3>
-            <div className='typography-wrap row'>
-              <div className='grid-md-12'>
-                <div className='custom-dropdown open'>
-                  <div className='dropdown-lable'>Select your size: <img src={ArrowDown}></img></div>
-                  <div className='dropdown-list'>
-                    <ul>
-                      <li>6 US</li>
-                      <li className='active'>8 US</li>
-                      <li>10 US</li>
-                      <li>12 US</li>
-                      <li className='disable'>14 US</li>
-                      <li>16 US</li>
-                      <li>18 US</li>
-                      <li>20 US</li>
-                      <li>22 US</li>
-                      <li>24 US</li>
-                      <li>26 US</li>
-                      <li>28 US</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Dropdown ArrowDown={ArrowDown} data={data || []} disabled={disabled || []}/>
           </div>
 
           <div className='typography-box'>
             <h3 className='typography-title'>Accordion</h3>
-            <div className='typography-wrap row'>
-              <div className='grid-md-12'>
-                <div className='custom-accordion'>
-                  <div className='accordion-item'>
-                    <div className='accordion-head'>Product Details <img src={PlusIcon}></img></div>
-                    <div className='accordion-body'>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac urna molestie, ultricies ipsum et, dapibus nunc.
-                    </div>
-                  </div>
-                  <div className='accordion-item'>
-                    <div className='accordion-head'>Shipping & Returns <img src={PlusIcon}></img></div>
-                    <div className='accordion-body'>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac urna molestie, ultricies ipsum et, dapibus nunc.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Accordion PlusIcon={PlusIcon} data={accordionData}/> 
           </div>
         </div>
       </div>
