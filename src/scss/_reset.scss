@@ -495,6 +495,48 @@ h6 {
     }
   }
 }
+
+.custom-accordion {
+  .accordion-item {
+    border-bottom: 0.1rem solid $color_silk;
+    &.open {
+      .accordion-head {
+        img {
+          @include transform(translateY(-50%) rotate(45deg));
+        }
+      }
+      .accordion-body{
+        display: block;
+      }
+    }
+    .accordion-head {
+      font-size: 1.2rem;
+      letter-spacing: 0.05rem;
+      line-height: 2rem;
+      color: $color_deep_grey;
+      font-weight: normal;
+      padding: 2rem 1.5rem;
+      position: relative;
+      cursor: pointer;
+      img {
+        position: absolute;
+        right: 1.5rem;
+        @include transform(translateY(-50%));
+        top: 50%;
+        @include transition(transform 0.2s ease);
+      }
+    }
+    .accordion-body {
+      padding: 0 2rem 2rem 2rem;
+      font-size: 1rem;
+      line-height: 1.8rem;
+      letter-spacing: 0.05rem;
+      font-weight: normal;
+      display: none;
+    }
+  }
+}
+
 p {
   font-size: 1.4rem;
   font-weight: 400;
