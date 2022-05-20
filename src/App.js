@@ -4,8 +4,9 @@ import SVGIcon from './svg/arrow-right.svg';
 import ArrowDown from './svg/arrow-down.svg';
 import PlusIcon from './svg/plus.svg';
 import Dropdown from './Components/Dropdown';
-import {data,disabled,accordionData} from "./Constants/constants" 
+import {data,disabled,accordionData,swatchesData} from "./Constants/constants" 
 import Accordion from './Components/Accordion';
+import Swatches from './Components/Swatches';
 
 function App() {
   return (
@@ -545,6 +546,11 @@ function App() {
           <div className='typography-box'>
             <h3 className='typography-title'>Accordion</h3>
             <Accordion PlusIcon={PlusIcon} data={accordionData}/> 
+          </div>
+
+          <div className='typography-box'>
+            <h3 className='typography-title'>Swatches</h3>
+           <Swatches data={swatchesData}/> 
           </div>
         </div>
       </div>

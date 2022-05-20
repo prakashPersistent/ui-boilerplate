@@ -9,3 +9,5 @@ export const accordionData = [{
     title:"Shipping & Returns",
     body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac urna molestie, ultricies ipsum et, dapibus nunc."
 }]
+
+export const swatchesData = ['red','blue','green','http://codeskulptor-assets.commondatastorage.googleapis.com/assets_clock_background.png']
