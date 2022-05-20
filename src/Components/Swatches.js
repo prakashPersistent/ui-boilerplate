@@ -11,20 +11,20 @@ const Swatches = ({data}) => {
 
     return (
         <div>
-          <div className='swateches-title'>
+          <div className='swatches-title'>
             Color:{active}
           </div>
-          <div className='swateches-row'>
+          <div className='swatches-row'>
             <ul>
                 {data?.map((ele,i)=>(
                     <>
                     <li>
-                      <div className='swateches-item'>
+                      <div className='swatches-item'>
                         <input type="radio" id={"color-swateche-"+i}  name="color-swateche" value={ele} onClick={()=>setActive(ele)} checked={ele === active}/>
                         <label for={"color-swateche-"+i}>
                                 {isValidUrl(ele) 
-                                ? <img className='swateches-type' src={ele}/>
-                                :<div className='swateches-type' style={{backgroundColor:ele}}></div>}
+                                ? <img className='swatches-type' src={ele}/>
+                                :<div className='swatches-type' style={{backgroundColor:ele}}></div>}
                         </label>
                       </div>
                     </li>

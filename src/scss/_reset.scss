@@ -557,13 +557,13 @@ code {
   border-radius: 0.5rem;
 }
 
-.swateches-title{
+.swatches-title{
   font-size: 12px;
   letter-spacing: 0.5px;
   line-height: 20px;
   margin-bottom: 12px;
 }
-.swateches-row {
+.swatches-row {
   ul {
     @include flexbox();
     @include align-items(center);
@@ -575,7 +575,7 @@ code {
       &:last-child {
         margin-right: 0px;
       }
-      .swateches-item{
+      .swatches-item{
         position: relative;
         input[type="radio"]{
           margin: 0;
@@ -600,7 +600,7 @@ code {
           @include justify-content(center);
           @include transition(border-color 0.2s ease);
           cursor: pointer;
-          .swateches-type{
+          .swatches-type{
             height: 17px;
             width: 17px;
             border-radius: 100%;
