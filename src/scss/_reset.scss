@@ -505,7 +505,7 @@ h6 {
           @include transform(translateY(-50%) rotate(45deg));
         }
       }
-      .accordion-body{
+      .accordion-body {
         display: block;
       }
     }
@@ -555,4 +555,60 @@ code {
   display: inline-block;
   background-color: $code-bg-color;
   border-radius: 0.5rem;
+}
+
+.swateches-title{
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+.swateches-row {
+  ul {
+    @include flexbox();
+    @include align-items(center);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0px;
+      }
+      .swateches-item{
+        position: relative;
+        input[type="radio"]{
+          margin: 0;
+          padding: 0;
+          height: 0px;
+          width: 0px;
+          position: absolute;
+          opacity: 0;
+          &:checked + label{
+            border-color: $color_deep_grey;
+          }
+        }
+        label{
+          height: 25px;
+          width: 25px;
+          border: 0.5px solid $color_tofu;
+          display: block;
+          border-radius: 100%;
+          background-color: $color_oat;
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          @include transition(border-color 0.2s ease);
+          cursor: pointer;
+          .swateches-type{
+            height: 17px;
+            width: 17px;
+            border-radius: 100%;
+            position: relative;
+            display: block;
+          }
+        }
+      }
+    }
+  }
 }

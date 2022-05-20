@@ -10,20 +10,29 @@ const Swatches = ({data}) => {
       }
 
     return (
-        <div className='typography-wrap row'>
-              <div className='grid-md-12'>
-                  {data?.map((ele,i)=>(
-                      <>
-                        <input type="radio" id={"radio"+i}  name="radio" value={ele} onClick={()=>setActive(ele)} checked={ele === active}/>
-                        <label for={"radio"+i}>
+        <div>
+          <div className='swateches-title'>
+            Color:{active}
+          </div>
+          <div className='swateches-row'>
+            <ul>
+                {data?.map((ele,i)=>(
+                    <>
+                    <li>
+                      <div className='swateches-item'>
+                        <input type="radio" id={"color-swateche-"+i}  name="color-swateche" value={ele} onClick={()=>setActive(ele)} checked={ele === active}/>
+                        <label for={"color-swateche-"+i}>
                                 {isValidUrl(ele) 
-                                ? <img src={ele} height={20} width={20}/>
-                                :ele}
+                                ? <img className='swateches-type' src={ele}/>
+                                :<div className='swateches-type' style={{backgroundColor:ele}}></div>}
                         </label>
-                    </>
-                  ))}
-              </div>
-            </div>
+                      </div>
+                    </li>
+                  </>
+                ))}
+            </ul>
+          </div>
+        </div>
     );
 
 }

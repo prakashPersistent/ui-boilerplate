@@ -550,7 +550,7 @@ function App() {
 
           <div className='typography-box'>
             <h3 className='typography-title'>Swatches</h3>
-           <Swatches data={swatchesData}/> 
+            <Swatches data={swatchesData}/> 
           </div>
         </div>
       </div>
