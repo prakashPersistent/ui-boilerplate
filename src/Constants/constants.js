@@ -10,4 +10,6 @@ export const accordionData = [{
     body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac urna molestie, ultricies ipsum et, dapibus nunc."
 }]
 
-export const swatchesData = ['red','blue','green','http://codeskulptor-assets.commondatastorage.googleapis.com/assets_clock_background.png']
+export const swatchesData = ['red','blue','green','http://codeskulptor-assets.commondatastorage.googleapis.com/assets_clock_background.png'];
+
+export const slides = ["Slide 1","Slide 2","Slide 3","Slide 4","Slide 5","Slide 6","Slide 7","Slide 8","Slide 9"]
