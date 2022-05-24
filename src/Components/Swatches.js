@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import ArrowIcon from "../svg/arrow-down.svg"; 
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,6 +14,18 @@ import { Pagination,Navigation } from "swiper";
 const Swatches = ({data}) => {
 
     const [active,setActive] = useState(false);
+    const [swiper, setSwiper] = React.useState();
+    const prevRef = React.useRef();
+    const nextRef = React.useRef();
+
+    React.useEffect(() => {
+      if (swiper && swiper.params?.navigation) {
+        swiper.params.navigation.prevEl = prevRef.current;
+        swiper.params.navigation.nextEl = nextRef.current;
+        swiper.navigation?.init();
+        swiper.navigation?.update();
+      }
+    }, [swiper]);
 
     const  isValidUrl = (_string) => {
         const matchPattern = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
@@ -21,16 +34,14 @@ const Swatches = ({data}) => {
 
     const Swatch = (ele,key)=>  (
       <>
-      <li key={key}>
-        <div className='swatches-item'>
-          <input type="radio" id={"color-swateche-"+key+ele}  name="color-swateche" value={ele} onClick={()=>setActive(ele)} checked={ele === active}/>
-          <label for={"color-swateche-"+key+ele}>
+        <div className='swatches-item' key={key}>
+          <input type="radio" id={"color-swateche-"+key}  name="color-swateche" value={ele} onClick={()=>setActive(ele)} checked={ele === active}/>
+          <label for={"color-swateche-"+key}>
                   {isValidUrl(ele) 
                   ? <img className='swatches-type' src={ele}/>
                   :<div className='swatches-type' style={{backgroundColor:ele}}></div>}
           </label>
         </div>
-      </li>
     </>
   )
 
@@ -40,39 +51,42 @@ const Swatches = ({data}) => {
             Color:{active}
           </div>
           <div className='swatches-row'>
-            <ul>
-              {data?.length > 10 ? 
+          <div className="swatches-arrow">
+            <div className="swiper-button btn-prev" ref={prevRef}>
+              <img src={ArrowIcon}></img>
+            </div>
+            <div className="swiper-button btn-next" ref={nextRef}>
+              <img src={ArrowIcon}></img>
+            </div>
+          </div>
+              
               <Swiper
               slidesPerView={10}
               slidesPerGroup={10}
-              spaceBetween={30}
-              navigation={true}
+              navigation={{
+                prevEl: prevRef?.current,
+                nextEl: nextRef?.current
+              }}
+              onSwiper={setSwiper}
               modules={[Pagination, Navigation]}
               breakpoints={{
                   320: {
                     slidesPerView: 8,
-                    spaceBetween: 10,
                   },
                   768: {
                     slidesPerView: 10,
-                    spaceBetween: 20,
                   },
                   1024: {
                     slidesPerView: 10,
-                    spaceBetween: 30,
                   },
                 }}
-                className="mySwiper"
+                className="swatches-swiper"
             >
                 {data.map((ele,i)=>(
                   <SwiperSlide key={i}>{Swatch(ele,i)}</SwiperSlide>
                 ))}
-            </Swiper> :
-            data?.map((ele,i)=>
-              Swatch(ele,i)
-            )}
+            </Swiper> 
                 
-            </ul>
           </div>
         </div>
     );

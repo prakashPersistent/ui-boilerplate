@@ -551,7 +551,7 @@ function App() {
             <Accordion PlusIcon={PlusIcon} data={accordionData}/> 
           </div>
 
-          <div className='typography-box'>
+          <div className='typography-box swatches-box'>
             <h3 className='typography-title'>Swatches</h3>
             {/* <Swatches data={swatchesData}/>  */}
             <Swatches data={swatchesHorizonatalScrollData}/> 

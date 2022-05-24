@@ -620,17 +620,36 @@ code {
   margin-bottom: 12px;
 }
 .swatches-row {
-  ul {
-    @include flexbox();
-    @include align-items(center);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    li {
-      margin-right: 10px;
-      &:last-child {
-        margin-right: 0px;
-      }
+  padding: 0 20px;
+  position: relative;
+  .swatches-arrow{
+    cursor: pointer;
+    user-select: none;
+    img{
+      width: 18.01px;
+      height: 8.8px;
+    }
+  }
+  .swiper-button{
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+  .btn-prev{
+    left: 0;
+    img{
+      @include transform(rotate(90deg));
+    }
+  }
+  .btn-next{
+    right: 0;
+    img{
+      @include transform(rotate(-90deg));
+    }
+  }
+  .swiper {
+    .swiper-slide {
+      
       .swatches-item{
         position: relative;
         input[type="radio"]{
@@ -656,6 +675,7 @@ code {
           @include justify-content(center);
           @include transition(border-color 0.2s ease);
           cursor: pointer;
+          margin: 0 auto;
           .swatches-type{
             height: 17px;
             width: 17px;
