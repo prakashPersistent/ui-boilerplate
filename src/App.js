@@ -4,7 +4,7 @@ import SVGIcon from './svg/arrow-right.svg';
 import ArrowDown from './svg/arrow-down.svg';
 import PlusIcon from './svg/plus.svg';
 import Dropdown from './Components/Dropdown';
-import {data,disabled,accordionData,swatchesData, slides} from "./Constants/constants" 
+import {data,disabled,accordionData,swatchesData, slides,swatchesHorizonatalScrollData} from "./Constants/constants" 
 import Accordion from './Components/Accordion';
 import Swatches from './Components/Swatches';
 import Carousel from './Components/Carousel';
@@ -553,7 +553,8 @@ function App() {
 
           <div className='typography-box'>
             <h3 className='typography-title'>Swatches</h3>
-            <Swatches data={swatchesData}/> 
+            {/* <Swatches data={swatchesData}/>  */}
+            <Swatches data={swatchesHorizonatalScrollData}/> 
           </div>
 
           <div className='typography-box'>

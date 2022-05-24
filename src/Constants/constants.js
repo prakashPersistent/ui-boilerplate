@@ -12,4 +12,6 @@ export const accordionData = [{
 
 export const swatchesData = ['red','blue','green','http://codeskulptor-assets.commondatastorage.googleapis.com/assets_clock_background.png'];
 
+export const swatchesHorizonatalScrollData = ['pink','grey','white','http://codeskulptor-assets.commondatastorage.googleapis.com/assets_clock_background.png','yellow','blue','green','http://codeskulptor-assets.commondatastorage.googleapis.com/assets_clock_background.png','red','blue','green','http://codeskulptor-assets.commondatastorage.googleapis.com/assets_clock_background.png'];
+
 export const slides = ["Slide 1","Slide 2","Slide 3","Slide 4","Slide 5","Slide 6","Slide 7","Slide 8","Slide 9"]
