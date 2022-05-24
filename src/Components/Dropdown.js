@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Dropdown = ({ArrowDown,data,disabled,isDropup}) => {
 
     const [isOpen,setIsOpen] = useState(false);
     const [active,setActive] = useState(false);
+
+    useEffect(()=>{
+      if(isDropup){
+        document.body.classList.add(
+          'dropup'
+        );
+      }
+    },[isDropup])
 
     const handleActive = (e,ele) => {
         setActive(ele);

@@ -542,6 +542,7 @@ function App() {
             <h3 className='typography-head'>Components</h3>
             <h3 className='typography-title'>Dropdown</h3>
             <Dropdown ArrowDown={ArrowDown} data={data || []} disabled={disabled || []}/>
+            <br/>
             <Dropdown ArrowDown={ArrowDown} data={data || []} disabled={disabled || []} isDropup={true}/>
           </div>
 
@@ -557,7 +558,7 @@ function App() {
 
           <div className='typography-box'>
             <h3 className='typography-title' >Carousel</h3>
-            <Carousel slidesPerView={3} slides={slides}/>
+            <Carousel slidesPerView={3} slides={slides} title="Products"/>
           </div>
         </div>
       </div>
