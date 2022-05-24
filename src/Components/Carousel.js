@@ -1,6 +1,7 @@
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import ArrowIcon from "../svg/arrow-down.svg"; 
 
 // Import Swiper styles
 import "swiper/css";
@@ -26,15 +27,19 @@ const  Carousel = ({slidesPerView,slides,title}) => {
   }, [swiper]);
 
   return (
-    <div className="carousle-wrp">
-      <div>{title}</div>
-      <div className="swiper-button" ref={prevRef}>
-          prev
+    <div className="carousle-wrap">
+      <div className="carousle-row">
+        <div className="carousle-title">{title}</div>
+        <div className="carousle-action">
+          <div className="swiper-button btn-prev" ref={prevRef}>
+            <img src={ArrowIcon}></img>
+          </div>
+          <div class="swiper-pagination-new"></div>
+          <div className="swiper-button btn-next" ref={nextRef}>
+            <img src={ArrowIcon}></img>
+          </div>
         </div>
-        <div class="swiper-pagination-new"></div>
-        <div className="swiper-button" ref={nextRef}>
-          Next
-        </div>
+      </div>
       <Swiper
         slidesPerView={slidesPerView}
         slidesPerGroup={slidesPerView}

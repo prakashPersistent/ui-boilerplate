@@ -558,7 +558,7 @@ function App() {
 
           <div className='typography-box'>
             <h3 className='typography-title' >Carousel</h3>
-            <Carousel slidesPerView={3} slides={slides} title="Products"/>
+            <Carousel slidesPerView={3} slides={slides} title="Carousel title here"/>
           </div>
         </div>
       </div>

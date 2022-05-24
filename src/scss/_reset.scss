@@ -668,3 +668,52 @@ code {
     }
   }
 }
+
+.carousle-wrap{
+  margin: 60px 0;
+  .carousle-row{
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(space-between);
+    margin-bottom: 28px;
+  }
+  .carousle-title{
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    color: $color_deep_grey;
+    font-weight: normal;
+    font-style: italic;
+  }
+  .carousle-action{
+    @include flexbox();
+    @include align-items(center);
+    .swiper-button{
+      cursor: pointer;
+      user-select: none;
+      img{
+        width: 18.01px;
+        height: 8.8px;
+      }
+    }
+    .btn-prev{
+      img{
+        @include transform(rotate(90deg));
+      }
+    }
+    .btn-next{
+      img{
+        @include transform(rotate(-90deg));
+      }
+    }
+    .swiper-pagination-new{
+      font-size: 14px;
+      font-weight: normal;
+      letter-spacing: 0.4px;
+      line-height: 26px;
+      color: $color_deep_grey;
+      margin-left: 11.6px;
+      margin-right: 11.6px;
+    }
+  }
+}
