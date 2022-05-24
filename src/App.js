@@ -542,6 +542,7 @@ function App() {
             <h3 className='typography-head'>Components</h3>
             <h3 className='typography-title'>Dropdown</h3>
             <Dropdown ArrowDown={ArrowDown} data={data || []} disabled={disabled || []}/>
+            <Dropdown ArrowDown={ArrowDown} data={data || []} disabled={disabled || []} isDropup={true}/>
           </div>
 
           <div className='typography-box'>

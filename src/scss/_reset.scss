@@ -494,6 +494,62 @@ h6 {
       }
     }
   }
+  &.dropup{
+    &.open{
+      .dropdown-list{
+        ul{
+          @include transform(translateY(0%));
+        }
+      }
+    }
+    .dropdown-list{
+      position: fixed;
+      z-index: 9999;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      max-height:inherit;
+      background-color: rgba($color_deep_grey,0.25);
+      ul{
+        background-color: $color_white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 275px;
+        overflow-y: auto;
+        @include transform(translateY(100%));
+        @include transition(transform 0.2s ease);
+        li{
+          &.dropup-label{
+            border: 0.1rem solid $color_tofu;
+            background-color: $color_silk;
+            padding: 12px 0;
+            text-align: center;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0.5px;
+            color: $color_deep_grey;
+            cursor: pointer;
+            user-select: none;
+            z-index: 1;
+            position: sticky;
+            top: 0;
+            img{
+              width: 13.91px;
+              height: 8px;
+              position: absolute;
+              top: 20px;
+              right: 17.35px;
+            }
+          }
+        }
+      }
+      
+    }
+  }
 }
 
 .custom-accordion {
